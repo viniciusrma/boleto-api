@@ -1,5 +1,6 @@
 const isNumber = require("../services/barCodeService");
 const expirationDate = require("../services/expirationDateService");
+const amountValue = require("../services/amountService");
 
 const express = require("express");
 const app = express();
@@ -32,7 +33,7 @@ app.get("/boleto/:id", (request, response) => {
 
   return response.status(200).json({
     barCode: barCode.id,
-    amount: "",
+    amount: amountValue(barCode),
     expirationDate: expirationDate(barCode),
   });
 });
