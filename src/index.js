@@ -1,3 +1,5 @@
+const isNumber = require("../services/barCodeService");
+
 const express = require("express");
 const app = express();
 const {
@@ -8,7 +10,12 @@ const {
 app.get("/boleto/:id", (request, response) => {
   const barCode = request.params;
 
-  //const amount = request.params[]
+  //valida se o código possui apenas números
+  if (!isNumber(barCode)) {
+    return response
+      .status(400)
+      .json({ error: "Por favor digite apenas números ❌" });
+  }
 
   if (!validBarCode(barCode.id)) {
     return response.status(400).json({
