@@ -1,10 +1,10 @@
-# boleto-api
+# Boleto-api 🧾🧮
 
-## 💻 applied technologies
+## 👨‍💻 Applied technologies 🔃
 
 - [NodeJS](https://nodejs.org/en/)
 
-## ⁉ How to use
+## ⁉ How to use 🔧
 
 1. Cloning the application:
 
@@ -31,7 +31,7 @@ Setup:
 
 ```
 
-## ⁉ Available Services
+## 🖥 Available Services 🗜
 
 This api is supposed to take a bank slip bar code as input and return valid expiration date, amount and the bar code itself.
 
