@@ -1,3 +1,5 @@
+// Cálculo da data de expiração do boleto
+
 module.exports = function expirationDate(str) {
   // fator de vencimento: a partir do 33º valor, 4 números
   const expiration = str.substr(32, 4);

@@ -1,5 +1,6 @@
+// Validação do módulo 10 da documentação
+
 module.exports = function mod10(str) {
-  
   // converte a string recebida em array
   const value = str.split("");
 
@@ -39,5 +40,4 @@ module.exports = function mod10(str) {
 
   // Dígito verificador (30 – 5 -> DV = 5)
   return Array.from(String(verifier), Number)[1];
-
 };

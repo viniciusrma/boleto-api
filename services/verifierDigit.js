@@ -1,6 +1,7 @@
 const mod10 = require("./mod10Service");
 
 // quebra a string recebida em 3 substrings, que são analisadas pelo mod10Service (Módulo 10 da documentação)
+
 module.exports = function verifier(code) {
   // retorna valores correspondentes aos campos 1, 2 e 3
   const field1 = code.substr(0, 9);
