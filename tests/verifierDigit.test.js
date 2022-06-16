@@ -1,4 +1,4 @@
-const verifierDigit = require("../services/verifierDigit");
+const verifierDigit = require("../src/services/verifierDigit");
 
 test("Quebra o array e identifica o dígito verificador", () => {
   expect(

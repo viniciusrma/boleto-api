@@ -1,4 +1,4 @@
-const barCodeService = require("../services/barCodeService");
+const barCodeService = require("../src/services/barCodeService");
 
 test("Checa a string recebida e a valida", () => {
   expect(
