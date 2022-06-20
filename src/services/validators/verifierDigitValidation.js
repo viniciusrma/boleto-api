@@ -1,5 +1,5 @@
-module.exports = function verifierDigitValidation(barCode, vd) {
-  const code = barCode.split("").reverse();
+module.exports = function verifierDigitValidation(str, vd) {
+  const code = str.split("").reverse();
   const summation = code.reduce((acc, current, index) => {
     let iterator = ((index + 1) % 2) + 1;
     let sum = Number(current) * iterator;

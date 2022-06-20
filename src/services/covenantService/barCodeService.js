@@ -3,18 +3,18 @@ const covenantValidator = require("../validators/covenantBarCodeValidation");
 
 // Quebra o boleto de convênio em 4 partes e valida os dígitos verificadores
 
-module.exports = function barCodeService(barCode) {
-  const field1 = barCode.substring(0, 11);
-  const verifierField1 = Number(barCode.substring(11, 12));
+module.exports = function barCodeService(str) {
+  const field1 = str.substring(0, 11);
+  const verifierField1 = Number(str.substring(11, 12));
 
-  const field2 = barCode.substring(12, 23);
-  const verifierField2 = Number(barCode.substring(23, 24));
+  const field2 = str.substring(12, 23);
+  const verifierField2 = Number(str.substring(23, 24));
 
-  const field3 = barCode.substring(24, 35);
-  const verifierField3 = Number(barCode.substring(35, 36));
+  const field3 = str.substring(24, 35);
+  const verifierField3 = Number(str.substring(35, 36));
 
-  const field4 = barCode.substring(36, 47);
-  const verifierField4 = Number(barCode.substring(47, 48));
+  const field4 = str.substring(36, 47);
+  const verifierField4 = Number(str.substring(47, 48));
 
   if (
     !validator(field1, verifierField1) ||

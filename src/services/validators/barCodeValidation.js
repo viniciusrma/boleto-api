@@ -1,16 +1,16 @@
-module.exports = function barCodeValidation(barCode) {
+module.exports = function barCodeValidation(str) {
   if (
-    barCode.length < 47 ||
-    barCode.length > 48 ||
-    (barCode.length >= 48 && barCode.substring(0, 1) !== "8") ||
-    (barCode.length < 47 && barCode.substring(0, 1) === "8")
+    str.length < 47 ||
+    str.length > 48 ||
+    (str.length >= 48 && str.substring(0, 1) !== "8") ||
+    (str.length < 47 && str.substring(0, 1) === "8")
   )
     return "Código do boleto inválido!";
 
-  if (!/^[0-9]{47,48}$/.test(barCode))
+  if (!/^[0-9]{47,48}$/.test(str))
     return "O código do boleto deve conter apenas números!";
 
-  if (barCode.length === 47 && barCode.substring(0, 1) === "8")
+  if (str.length === 47 && str.substring(0, 1) === "8")
     return "Boleto inválido!";
 
   return true;

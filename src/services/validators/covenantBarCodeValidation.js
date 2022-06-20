@@ -1,6 +1,6 @@
-module.exports = function covenantBarCodeValidation(barCode) {
-  const part1 = barCode.substring(0, 3);
-  const part2 = barCode.substring(4, barCode.length);
+module.exports = function covenantBarCodeValidation(str) {
+  const part1 = str.substring(0, 3);
+  const part2 = str.substring(4, str.length);
   const newBarCode = part1 + part2;
 
   const code = newBarCode.split("").reverse();

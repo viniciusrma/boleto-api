@@ -1,6 +1,6 @@
-module.exports = function titleBarCodeValidation(barCode, vd) {
-  const part1 = barCode.substring(0, 4);
-  const part2 = barCode.substring(5, barCode.length);
+module.exports = function titleBarCodeValidation(str, vd) {
+  const part1 = str.substring(0, 4);
+  const part2 = str.substring(5, str.length);
   const newBarCode = part1 + part2;
 
   const code = newBarCode.split("").reverse();

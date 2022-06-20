@@ -1,8 +1,8 @@
-module.exports = function getAmount(barCode) {
+module.exports = function getAmount(str) {
   const currency = parseFloat(
-    barCode.substring(barCode.length - 10, barCode.length - 2)
+    str.substring(str.length - 10, str.length - 2)
   );
-  const coin = barCode.substring(barCode.length - 2, barCode.length);
+  const coin = str.substring(str.length - 2, str.length);
   const boletoAmount = currency.toString() + "." + coin;
 
   return boletoAmount;

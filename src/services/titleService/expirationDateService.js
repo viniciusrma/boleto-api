@@ -1,6 +1,6 @@
-module.exports = function getDate(barCode) {
+module.exports = function getDate(str) {
   const days = parseInt(
-    barCode.substring(barCode.length - 14, barCode.length - 10)
+    str.substring(str.length - 14, str.length - 10)
   );
   let expirationDate = new Date("1998-01-01");
   expirationDate.setDate(expirationDate.getDate() + days);
