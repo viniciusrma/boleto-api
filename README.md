@@ -43,6 +43,11 @@ It is composed by 5 services:
 - expirationDateService - After all validations are done, it returns the expiration date of the bank slip
 - amountService - After all validations are done, it returns the amount of the bank slip
 
+## test cases
+
+- 21290001192110001210904475617405975870000002000 (successful),
+- 21290008192110001290904475617405976870000502000 (error)
+
 <h4  align="center">
 Made with ❤ by <a  href="https://www.linkedin.com/in/viniciusrma/"  target="_blank">Vinícius Morais</a>
 </h4>
