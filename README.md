@@ -27,7 +27,8 @@ Setup:
 
 ```sh
 
-- run `npm test`
+- run `npm run test`
+- run `npm run coverage`
 
 ```
 
